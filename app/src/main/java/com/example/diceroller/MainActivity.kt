@@ -16,14 +16,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DiceRollerTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Androdfdihdshs")
-                }
+           DiceRollerTheme {
+               DiceRollerApp()
             }
         }
     }
@@ -41,6 +35,17 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     DiceRollerTheme {
-        Greeting("Android")
+
     }
+}
+
+@Composable
+fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
+}
+
+
+@Preview
+@Composable
+fun DiceRollerApp() {
+    DiceWithButtonAndImage()
 }
